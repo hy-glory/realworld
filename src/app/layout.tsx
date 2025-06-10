@@ -1,23 +1,26 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Header from "./layout/Header";
-import Footer from "./layout/Footer";
-import AuthUser from "./layout/AuthUser";
+import type { Metadata } from 'next';
+import './globals.css';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
 
-const metadata: Metadata = {
-  title: "Conduit",
-  description: "Real World Example App",
+export const metadata: Metadata = {
+  title: 'Conduit',
+  description: 'Real World Example App',
 };
 
-interface LayoutProps {}
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
 
-const RootLayout = ({ children }) => {
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </>
+    <html lang="en">
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
   );
 };
 
