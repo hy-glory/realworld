@@ -1,13 +1,17 @@
+"use client";
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <a href="/" className="logo-font">
+        <Link href="/" className="logo-font">
           conduit
-        </a>
+        </Link>
         <span className="attribution">
-          An interactive learning project from <a href="https://thinkster.io">Thinkster</a>. Code &amp; design licensed
-          under MIT.
+          An interactive learning project from{" "}
+          <Link href="https://thinkster.io">Thinkster</Link>. Code &amp; design
+          licensed under MIT.
         </span>
       </div>
     </footer>

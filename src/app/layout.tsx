@@ -9,9 +9,11 @@ const metadata: Metadata = {
   description: "Real World Example App",
 };
 
-interface LayoutProps {}
+interface LayoutProps {
+  children: React.ReactNode;
+}
 
-const RootLayout = ({ children }) => {
+const RootLayout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />

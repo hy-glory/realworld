@@ -1,34 +1,37 @@
+"use client";
+import Link from "next/link";
+
 const AuthUser = () => {
   return (
     <>
       <nav className="navbar navbar-light">
         <div className="container">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" href="/">
             conduit
-          </a>
+          </Link>
           <ul className="nav navbar-nav pull-xs-right">
             <li className="nav-item">
-              <a className="nav-link active" href="/">
+              <Link className="nav-link active" href="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/editor">
+              <Link className="nav-link" href="/editor">
                 {" "}
                 <i className="ion-compose"></i>&nbsp;New Article{" "}
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/settings">
+              <Link className="nav-link" href="/settings">
                 {" "}
                 <i className="ion-gear-a"></i>&nbsp;Settings{" "}
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/profile/eric-simons">
+              <Link className="nav-link" href="/profile/eric-simons">
                 <img src="" className="user-pic" />
                 Eric Simons
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
